@@ -1,0 +1,62 @@
+#title_box {
+	position: center;
+	color: white;
+	background: linear-gradient(to bottom, #3bff14 0%,#299a0b 100%);
+	border-radius: 54px;
+	margin-left: 120px;
+	margin-right: 120px;
+	margin-top: 60px;
+	box-shadow:  5px 4px 5px #555555;
+}
+
+#title_box h1 {
+	font-size: 80px;
+	margin-left: 120px;
+	padding-top: 40px;
+	padding-bottom: 120px;
+}
+
+#form_box {
+	margin-left: 128px;
+}
+
+#leaf_image {
+	margin-left: 960px;
+	margin-top: 10px;
+	width: 200px;
+	height: 240px;
+	position: fixed;
+}
+
+.form_field {
+	font-family: Tahoma;
+	margin-bottom: 5px;
+	font-size: 12px;
+}
+
+.form_field input[type=text] 
+{
+	margin-left: 40px;
+	width: 360px;
+	height: 25px;
+	display: inline-block;
+}
+
+.font_submit {
+	margin-left: 80px;
+}
+
+
+.form_submit input[type=submit]
+{
+	color: #0088EE;
+	background: linear-gradient(to bottom, #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%);
+	font-weight: bold;
+	font-family: Tahoma;
+	text-align: center;
+	padding: 7.5px 20px 7.5px 20px;
+	border-radius: 7.5px;
+	margin-top: 40px;
+	margin-left: 512px;
+	border-color: #CCCCDD
+}
