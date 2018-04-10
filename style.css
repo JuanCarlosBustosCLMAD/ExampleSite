@@ -36,11 +36,29 @@
 
 .form_field input[type=text] 
 {
-	margin-left: 40px;
+	margin-left: 84px;
 	width: 360px;
 	height: 25px;
 	display: inline-block;
 }
+
+
+.form_field input[type=email] 
+{
+	margin-left: 94px;
+	width: 360px;
+	height: 25px;
+	display: inline-block;
+}
+
+.form_field input[type=number] 
+{
+	margin-left: 80px;
+	width: 360px;
+	height: 25px;
+	display: inline-block;
+}
+
 
 .font_submit {
 	margin-left: 80px;

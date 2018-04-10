@@ -3,8 +3,49 @@
 <head>
 <title>Green Leaves</title>
 <link rel="stylesheet" type="text/css" href="style.css">
+<link rel = "stylesheet" href = "https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+<script src = "https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+<script type="text/javascript" src="node_modules/geonames.js/dist/geonames.min.js"></script>
+      <style>
+         .md-content {
+            padding-bottom: 200px; 
+         }
+         
+        .validation-messages {
+            font-size: 11px;
+            color: darkred;
+            margin: 10px 0 0 25px; 
+         }
+      </style>
+<script language = "javascript">
+         angular
+            .module('firstApplication', ['ngMaterial','ngMessages'])
+            .controller('dateController', dateController);
+
+         function dateController ($scope) {
+            $scope.myDate = new Date();
+            $scope.minDate = new Date(
+               $scope.myDate.getFullYear(),
+               $scope.myDate.getMonth() - 2,
+               $scope.myDate.getDate());
+               
+            $scope.maxDate = new Date(
+               $scope.myDate.getFullYear(),
+               $scope.myDate.getMonth() + 2,
+               $scope.myDate.getDate());
+               
+            $scope.onlyWeekendsPredicate = function(date) {
+               var day = date.getDay();
+               return day === 0 || day === 6;
+            }
+         }                 
+</script>    
 </head>
-<body>
+<body ng-app="">
       	<img id = "leaf_image" src = "green.png">
 
 	<div id = "title_box">
@@ -15,20 +56,17 @@
 	<div id = "form_box">
 		<form>	
 			<div class = "form_field">
-			 Nombre :  <input type="text" name="nombre" /><br />
+			 Nombre :  <input type="text" name="nombre" required/><br />
 			</div>
 
 			<div class = "form_field">
-			 E-mail :  <input type="text" name="email" /><br />
+			 E-mail :  <input type="email"  name="email" required/><br />
 			</div>
 
 			<div class = "form_field">
-                        Teléfono :  <input type="text" name="telefono" /><br />
+                        Teléfono :  <input type="number" name="telefono" required/><br />
 			</div>
 
-			<div class = "form_field">
-			 Fecha :  <input type="text" name="fecha" /><br />
-			</div>
 
 			<div class = "form_field">
 			 Ciudad y Estado :   <input type="text" name="ciudad" /><br />
